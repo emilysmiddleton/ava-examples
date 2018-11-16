@@ -1,0 +1,33 @@
+{
+  "name": "ava-examples",
+  "version": "1.0.0",
+  "description": "An introduction to Ava",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc -p .",
+    "test": "ava --verbose test",
+    "test:1": "npm run build && ava --verbose test/1_*",
+    "test:2": "npm run build && ava --verbose test/2_*",
+    "test:3": "npm run build && ava --verbose test/3_*",
+    "test:4": "npm run build && ava --verbose test/4_*",
+    "test:5": "npm run build && ava --verbose test/5_*",
+    "test:6": "npm run build && ava --verbose test/6_*",
+    "test:7": "npm run build && ava --verbose test/7_*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilysmiddleton/ava-examples.git"
+  },
+  "keywords": [],
+  "author": "Emily Middleton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilysmiddleton/ava-examples/issues"
+  },
+  "homepage": "https://github.com/emilysmiddleton/ava-examples#readme",
+  "dependencies": {
+    "ava": "^0.25.0",
+    "config": "^2.0.1",
+    "typescript": "^3.1.4"
+  }
+}
