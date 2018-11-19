@@ -1,13 +1,5 @@
 import test from 'ava';
-import { add, power } from '../src/functions';
-
-/**
- * Tests can be skipped, e.g. while they are WIP.
- */
-test.skip('test 1', t => {
-    const sum: number = add(1, 2);
-    t.is(sum, 3);
-});
+import { power } from '../src/functions';
 
 /**
  * If a test is known not to pass, it can be marked as such.

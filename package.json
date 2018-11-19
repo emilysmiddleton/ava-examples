@@ -10,9 +10,11 @@
     "test:2": "npm run build && ava --verbose test/2_*",
     "test:3": "npm run build && ava --verbose test/3_*",
     "test:4": "npm run build && ava --verbose test/4_*",
-    "test:5": "npm run build && ava --verbose test/5_*",
+    "test:5a": "npm run build && ava --verbose test/5_*",
+    "test:5b": "npm run build && ava --verbose test/5_*",
     "test:6": "npm run build && ava --verbose test/6_*",
-    "test:7": "npm run build && ava --verbose test/7_*"
+    "test:7": "npm run build && ava --verbose test/7_*",
+    "test:8": "npm run build && ava --verbose test/8_*"
   },
   "repository": {
     "type": "git",
