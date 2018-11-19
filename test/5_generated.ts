@@ -1,12 +1,9 @@
 import test from 'ava';
+import { add, multiply } from '../src/functions';
 
-function add(a: number, b: number): number {
-    return a + b;
-}
-
-function multiply(a: number, b: number): number {
-    return a * b;
-}
+const testName = (operator: string, input: any): string => {
+    return `${input.a} ${operator} ${input.b} = ${input.sum}`;
+};
 
 const testInput = [
     { a: 1, b: 2, sum: 3, product: 2 },
@@ -21,13 +18,14 @@ const testInput = [
  * Tests can be auto-generated from fixtures.
  */
 for (const input of testInput) {
-    test(`${input.a} + ${input.b} = ${input.sum}`, async t => {
+    test(testName('+', input), async t => {
         const result: number = add(input.a, input.b);
         t.is(result, input.sum);
     });
 
-    test(`${input.a} * ${input.b} = ${input.product}`, async t => {
+    test(testName('*', input), async t => {
         const result: number = multiply(input.a, input.b);
         t.is(result, input.product);
     });
 }
+

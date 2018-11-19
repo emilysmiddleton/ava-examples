@@ -1,13 +1,5 @@
 import test from 'ava';
-import { delay } from './_utils';
-
-async function slowAdd(a: number, b: number): Promise<number> {
-    console.log(`About to add ${a} and ${b}`);
-    await delay();
-    const sum: number = a + b;
-    console.log(`${a} + ${b} = ${sum}`);
-    return new Promise<number>((resolve, _reject) => resolve(sum));
-}
+import { slowAdd } from '../src/functions';
 
 test('slow test 1', async t => {
     const result: Promise<number> = slowAdd(2, 2);

@@ -1,11 +1,8 @@
 import test from 'ava';
-
-function add(_a: number, _b: number): number {
-    return 0;
-}
+import { add, power } from '../src/functions';
 
 /**
- * Tests can be skipped while they are WIP.
+ * Tests can be skipped, e.g. while they are WIP.
  */
 test.skip('test 1', t => {
     const sum: number = add(1, 2);
@@ -22,6 +19,6 @@ test.skip('test 1', t => {
  * the test is fixed.
  */
 test.failing('test 2', t => {
-    const sum: number = add(1, 2);
-    t.is(sum, 3);
+    const sum: number = power(2, 3);
+    t.is(sum, 8);
 });

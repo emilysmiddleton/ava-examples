@@ -1,15 +1,5 @@
 import test from 'ava';
-import { delay } from './_utils';
-
-class Counter {
-    count: number = 0;
-    reset() {
-        this.count = 0;
-    }
-    increment() {
-        this.count++;
-    }
-}
+import { Counter, delay } from '../src/functions';
 
 test.beforeEach(async t => {
     t.context.counter = new Counter();

@@ -1,15 +1,6 @@
 import test from 'ava';
+import { divide } from '../src/functions';
 
-function divide(a: number, b: number): Promise<number> {
-    return new Promise((resolve, reject) => {
-        if (b === 0) {
-            reject('Can not divide by zero');
-        }
-        else {
-            resolve(a / b);
-        }
-    });
-}
 
 /**
  * Testing promises is super easy. Tests are already async,
